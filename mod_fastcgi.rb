@@ -58,7 +58,7 @@ class ModFastcgi < Formula
     end
   end
 
-  if MacOS.version == :yosemite || build.with?("homebrew-httpd24")
+  if MacOS.version == :yosemite || MacOS.version == :el_capitan || build.with?("homebrew-httpd24")
     patch do
       url "https://raw.githubusercontent.com/ByteInternet/libapache-mod-fastcgi/byte/debian/patches/byte-compile-against-apache24.diff"
       sha256 "e405f365fac2d80c181a7ddefc9c6332cac7766cb9c67c464c272d595cde1800"
